@@ -8,7 +8,7 @@ const LINKS = {
   github: 'https://github.com/ruby-coder-gh',
   linkedin: 'https://www.linkedin.com/in/nikunj-vaghasiya-9b84a5290',
   email: `mailto:${EMAIL}`,
-  live: 'https://groovy-chatbot.vercel.app',
+  live: 'https://iso27001-readiness.vercel.app',
 };
 
 const store = {
