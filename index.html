@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NIKUNJ — AI Engineer &amp; Security Builder</title>
+<meta name="description" content="Nikunj Vaghasiya, AI First Engineer leading product at Groovy Web: offline RAG, multi-agent SOC tooling, honeypots, LLM agent evaluation and AI security apps.">
+<meta property="og:title" content="NIKUNJ — AI Engineer & Security Builder">
+<meta property="og:description" content="AI First Engineer leading product at Groovy Web, AI evaluation at Snorkel AI. Offline RAG, multi-agent SOC tooling, honeypots and AI security apps.">
+<meta property="og:image" content="https://ruby-coder-gh.github.io/assets/nikunj.jpg">
+<meta property="og:url" content="https://ruby-coder-gh.github.io/">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23aaff00' text-anchor='middle'>NV</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@900&family=Orbitron:wght@500;700;800;900&family=Playfair+Display:ital,wght@1,600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chakri-sym" viewBox="-50 -50 100 100">
+    <g fill="#ff2d3d">
+      <path id="blade" d="M0-48C10-37 17-24 15-11L2-14C4-25 2-37 0-48z"/>
+      <use href="#blade" transform="rotate(60)"/>
+      <use href="#blade" transform="rotate(120)"/>
+      <use href="#blade" transform="rotate(180)"/>
+      <use href="#blade" transform="rotate(240)"/>
+      <use href="#blade" transform="rotate(300)"/>
+      <circle r="16"/>
+    </g>
+    <circle r="6" fill="#000"/>
+    <circle r="11" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="3 3"/>
+  </symbol>
+</svg>
+
+<!-- enter gate: also unlocks audio, which browsers only allow after a click or key -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Enter the portfolio">
+  <p class="gate-title">WELCOME TO NIKUNJ'S <span>PORTFOLIO</span></p>
+  <div class="laptop" aria-hidden="true">
+    <div class="laptop-screen">
+      <div class="laptop-display"><pre id="gate-log"></pre><span class="power-ring"></span></div>
+      <span class="laptop-brand">NIKUNJ</span>
+    </div>
+    <div class="laptop-base"></div>
+  </div>
+  <p class="gate-sub">INITIALIZING NEURAL KERNEL • NV-OS</p>
+  <button class="enter-btn" id="enter-btn" type="button">
+    <span class="enter-key" aria-hidden="true">↵</span>
+    <span><b>CLICK HERE TO ENTER</b><small>PRESS ENTER ↵ · SOUND ON</small></span>
+    <i class="enter-dot" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="chakri" id="chakri" aria-hidden="true"><svg><use href="#chakri-sym"/></svg></div>
+<div class="cols" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Nikunj Vaghasiya, back to top">
+    <span class="dock" id="dock" aria-hidden="true"><svg><use href="#chakri-sym"/></svg></span>
+    Nikunj <b class="last">Vaghasiya</b>
+  </a>
+  <div class="nav-mid">
+    <button class="sfx-btn" id="sfx-btn" type="button" aria-pressed="true" aria-label="Sound effects">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6h3l4-3v10l-4-3H2z" fill="currentColor"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6 6 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>SFX
+    </button>
+    <button class="sfx-btn" id="bgm-btn" type="button" aria-pressed="true" aria-label="Background music">♪ BGM</button>
+    <span class="sep loc">•</span><span class="loc">ANAND, IN</span>
+    <span class="sep">•</span><span class="clock-wrap" id="clock" aria-label="Local time in India">00:00:00</span>
+  </div>
+  <button class="menu-btn hud-c" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">MENU</button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Site menu">
+  <button class="menu-close hud-c" id="menu-close" type="button">CLOSE ✕</button>
+  <div class="wrap menu-inner">
+    <ol class="menu-links">
+      <li><a href="#top" style="--i:0"><span>01</span>HOME</a></li>
+      <li><a href="#about" style="--i:1"><span>02</span>ABOUT</a></li>
+      <li><a href="#experience" style="--i:2"><span>03</span>EXPERIENCE</a></li>
+      <li><a href="#skills" style="--i:3"><span>04</span>SKILLS</a></li>
+      <li><a href="#projects" style="--i:4"><span>05</span>PROJECTS</a></li>
+      <li><a href="#terminal" style="--i:5"><span>06</span>TERMINAL</a></li>
+      <li><a href="#contact" style="--i:6"><span>07</span>CONTACT</a></li>
+    </ol>
+    <div class="menu-side">
+      <a href="https://github.com/ruby-coder-gh" target="_blank" rel="noopener">GITHUB ↗</a>
+      <a href="https://www.linkedin.com/in/nikunj-vaghasiya-9b84a5290" target="_blank" rel="noopener">LINKEDIN ↗</a>
+      <a href="mailto:nvaghasiya621@gmail.com">EMAIL ↗</a>
+    </div>
+  </div>
+</nav>
+
+<div class="rail" aria-hidden="true">
+  <span class="rail-cap top"></span>
+  <span class="rail-fill" id="rail-fill"></span>
+  <span class="rail-car" id="rail-car">
+    <svg viewBox="0 0 26 52"><g fill="#0b0b0b" stroke="#aaff00" stroke-width="1.2">
+      <rect x="2" y="2" width="22" height="4" rx="1"/>
+      <rect x="0" y="9" width="5" height="10" rx="1.5"/><rect x="21" y="9" width="5" height="10" rx="1.5"/>
+      <path d="M9 6h8l3 15-2 21h-10l-2-21z"/>
+      <rect x="0" y="32" width="4" height="8" rx="1.5"/><rect x="22" y="32" width="4" height="8" rx="1.5"/>
+      <rect x="3" y="45" width="20" height="4" rx="1"/>
+      <circle cx="13" cy="22" r="2.6" fill="#aaff00"/>
+    </g></svg>
+  </span>
+  <span class="rail-cap bot"></span>
+</div>
+<div class="speedo" id="speedo" aria-hidden="true"><b id="kmh">0</b>KM/H<i id="drs">DRS</i></div>
+
+<main id="main">
+  <section class="hero wrap" id="top">
+    <div class="hero-left">
+      <p class="hero-intro">I build <code class="chip lime">&lt;AI/&gt;</code> systems and <code class="chip purple">Security</code> tools, turning ideas into things that think and fight back.</p>
+      <p class="hero-intro">AI First Engineer leading product by day, evaluating frontier coding agents on the side. Offline RAG, agent swarms, honeypots: if it can learn or defend, I build it.</p>
+      <div class="pills"><span class="pill">AI ENGINEER</span><span class="pill">FORWARD DEPLOYED</span><span class="pill">LLM AGENT EVAL</span></div>
+      <h1 class="hero-name" id="hero-name" aria-label="Nikunj" title="Click me">
+        <span class="name-half top" aria-hidden="true">NIKUNJ</span>
+        <span class="name-half bot" aria-hidden="true">NIKUNJ</span>
+        <span class="seam" aria-hidden="true"></span>
+      </h1>
+      <p class="hero-tag"><span>⚡</span> AI ENGINEER × SECURITY BUILDER</p>
+    </div>
+    <figure class="hero-photo" id="hero-photo">
+      <img src="assets/nikunj-cutout.webp" alt="Nikunj Vaghasiya holding up a phone camera" width="409" height="734">
+      <figcaption class="photo-tag"><span>01 //</span> DEV <i></i></figcaption>
+    </figure>
+    <p class="vert" aria-hidden="true">FROM INDIA</p>
+    <p class="coords" aria-hidden="true">IST // UTC+05:30</p>
+    <a class="scroll-cue" href="#manifesto" aria-label="Scroll down"><b>SCROLL DOWN</b><span>▼<br>▼<br>▼</span></a>
+  </section>
+
+  <section class="manifesto" id="manifesto" aria-label="Manifesto">
+    <div class="manifesto-inner wrap">
+      <p class="reveal-words" id="reveal">I don't just train models <em>—</em> I <em>ship</em> things. I turn ideas into <em>working systems</em> that <em>think,</em> <em>defend,</em> and keep data where it belongs: on <em>your machine.</em></p>
+      <p class="arrow-line" aria-hidden="true">────────►</p>
+    </div>
+  </section>
+
+  <section class="about wrap" id="about">
+    <p class="label">[ ABOUT ME ]</p>
+    <div class="about-grid">
+      <figure class="scanner scanned" data-reveal>
+        <div class="scan-frame">
+          <img src="assets/nikunj.jpg" alt="Portrait of Nikunj Vaghasiya" width="800" height="780" loading="lazy">
+          <span class="rec" aria-hidden="true">REC CAM-01</span>
+          <span class="lock" aria-hidden="true"></span>
+          <span class="scan-line" aria-hidden="true"></span>
+        </div>
+        <figcaption>
+          <div><span>SUBJECT</span><b>N. VAGHASIYA</b></div>
+          <div><span>MATCH</span><b id="match">99.7%</b></div>
+          <div><span>CLEARANCE</span><b id="clearance">GRANTED</b></div>
+        </figcaption>
+      </figure>
+      <div class="about-copy" data-reveal>
+        <p>I'm <strong>Nikunj Vaghasiya</strong>, an AI engineer working where AI meets cybersecurity. At <strong>Groovy Web</strong> I'm an AI First Engineer leading product for a US clinical-research platform, three months after joining as an intern. For <strong>Snorkel AI</strong> I write the benchmark tasks frontier coding agents get graded on.</p>
+        <p>After hours I build: <code class="chip lime">&lt;RAG/&gt;</code> pipelines that run fully offline, <code class="chip purple">&lt;agents/&gt;</code> that triage security incidents, and <code class="chip red">honeypots</code> that watch attackers work.</p>
+        <p>Most of my projects start with a question, like "what if the AI never needed the cloud?", and end as a working system. That <em class="serif">curiosity</em> is the whole job.</p>
+        <dl class="stats" id="stats">
+          <div><dt>ACCEPTED EVAL TASKS</dt><dd data-n="82">82</dd></div>
+          <div><dt>MONTHS, INTERN → PRODUCT LEAD</dt><dd data-n="3">03</dd></div>
+          <div><dt>PROJECTS BUILT</dt><dd data-n="17">17</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp wrap" id="experience">
+    <div class="sec-head dark-head" data-reveal>
+      <span class="sec-num">02</span>
+      <h2>EXPERIENCE</h2>
+      <p class="sec-sub">MISSION LOG // 2024 → NOW</p>
+    </div>
+    <p class="sec-low" data-reveal>where the builds go to work. newest first.</p>
+
+    <ol class="xp-list">
+      <li class="xp hud-c" data-reveal>
+        <div class="xp-when"><b>JUN 2026 — NOW</b><span>FULL-TIME</span><i class="led g"></i></div>
+        <div class="xp-main">
+          <h3>Groovy Web</h3>
+          <p class="xp-role">AI First Engineer · leading product for DM Clinical Research (US client)</p>
+          <ol class="lvl" aria-label="Promotion path">
+            <li><b>INTERN</b><span>JUN '26</span></li>
+            <li><b>FULL-TIME</b><span>AUG '26</span></li>
+            <li><b>PRODUCT LEAD</b><span>SEP '26</span></li>
+          </ol>
+          <ul class="points">
+            <li>Lead delivery of Nexus (app for clinic-owning providers) and Comtrack Lite (app for clinical-trial recruiters) across React Native mobile, React web and .NET admin: development, QA, staging demos, releases and support.</li>
+            <li>Built features for Lumen, the patient app: appointment booking, plus study-based pricing that pays patients automatically as they complete each clinical-trial step.</li>
+            <li>Turn US stakeholder requirements into workflows, catching missing scenarios across the provider, patient and recruiter apps before tickets get written.</li>
+            <li>Shipped a production website in 3 days with Claude Code and Codex CLI agentic workflows.</li>
+          </ul>
+          <ul class="chips"><li>React Native</li><li>React.js</li><li>.NET</li><li>Claude Code</li><li>Codex CLI</li><li>QA &amp; releases</li></ul>
+        </div>
+      </li>
+
+      <li class="xp hud-c" data-reveal>
+        <div class="xp-when"><b>JAN 2026 — NOW</b><span>CONTRACT</span><i class="led g"></i></div>
+        <div class="xp-main">
+          <h3>Snorkel AI</h3>
+          <p class="xp-role">AI Evaluation Contributor · terminal-agent benchmarks &amp; coding-agent evals</p>
+          <div class="tasks">
+            <dl class="tasks-n"><dt>ACCEPTED TASKS</dt><dd data-n="82">82</dd></dl>
+            <div>
+              <div class="tasks-bar" aria-hidden="true"><i style="--n:45"></i><i style="--n:10"></i><i style="--n:12"></i><i style="--n:15"></i></div>
+              <ul class="tasks-key"><li>TERMINAL-BENCH 2.0 · 45</li><li>TERMINAL-BENCH 3.0 · 10</li><li>CODING-AGENT EVAL · 12</li><li>CODING-AGENT EVAL · 15</li></ul>
+            </div>
+          </div>
+          <ul class="points">
+            <li>Designed Terminal-Bench 3.0 tasks that passed multi-model quality review and a difficulty gate measured on frontier Claude Opus and GPT agents.</li>
+            <li>Built Python and Docker validation tooling: parallel grader mutation tests, repeatable pass/fail checks, and hardened graders that trace system calls.</li>
+          </ul>
+          <ul class="chips"><li>Python</li><li>Docker</li><li>pytest</li><li>Linux / Bash</li><li>LLM evaluation</li></ul>
+        </div>
+      </li>
+
+      <li class="xp xp-mini hud-c" data-reveal>
+        <div class="xp-when"><b>MAY — JUN 2025</b><span>INTERNSHIP</span></div>
+        <div class="xp-main"><h3>Exposys Data Labs</h3><p class="xp-role">Cybersecurity Intern</p></div>
+      </li>
+      <li class="xp xp-mini hud-c" data-reveal>
+        <div class="xp-when"><b>JUN — JUL 2024</b><span>INTERNSHIP</span></div>
+        <div class="xp-main"><h3>InternPe</h3><p class="xp-role">Java Developer Intern</p></div>
+      </li>
+    </ol>
+
+    <div class="edu" data-reveal>
+      <div class="edu-card hud-c">
+        <span class="badge">EDUCATION</span>
+        <h3>B.Tech, Computer Engineering</h3>
+        <p>CHARUSAT · 2023 — 2027 (expected)</p>
+        <div class="meter" aria-hidden="true"><i style="--v:.8"></i></div>
+        <small>FINAL YEAR // LOADING…</small>
+      </div>
+      <div class="edu-card hud-c">
+        <span class="badge">CERTIFIED</span>
+        <h3>AWS Academy Graduate</h3>
+        <p>Cloud Developing</p>
+        <small>CREDENTIAL // AWS</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills lime-sec" id="skills">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="sec-num">03</span>
+        <h2>SKILLS &amp; TOOLS</h2>
+        <p class="sec-sub">THE ARSENAL BEHIND EVERY BUILD.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card hud-c">
+          <header><h3>PYTHON</h3><span class="badge">CORE // LANG</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><rect x="8" y="6" width="94" height="60" rx="6"/><path d="M8 18h94M24 32l12 9-12 9M44 52h22"/></svg></div>
+          <div class="meter"><i style="--v:.96"></i></div>
+          <footer><span>FASTAPI · FLASK // LOADED</span><b>PRIMARY</b></footer>
+        </article>
+        <article class="skill-card hud-c">
+          <header><h3>LANGGRAPH</h3><span class="badge">NEURAL // AGENTS</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><circle cx="16" cy="36" r="9"/><circle cx="55" cy="13" r="9"/><circle cx="55" cy="59" r="9"/><circle cx="94" cy="36" r="9"/><path d="M24 31l23-13M24 41l23 13M63 18l23 13M63 54l23-13M55 22v28"/></svg></div>
+          <div class="meter"><i style="--v:.88"></i></div>
+          <footer><span>WATCHER · ANALYST · ENFORCER</span><b>SYNCED</b></footer>
+        </article>
+        <article class="skill-card hud-c">
+          <header><h3>OLLAMA</h3><span class="badge">LOCAL // LLM</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><rect x="33" y="14" width="44" height="44" rx="4"/><rect x="45" y="26" width="20" height="20"/><path d="M41 4v10M55 4v10M69 4v10M41 58v10M55 58v10M69 58v10M23 24h10M23 36h10M23 48h10M77 24h10M77 36h10M77 48h10"/></svg></div>
+          <div class="meter"><i style="--v:.9"></i></div>
+          <footer><span>ZERO PAID APIS</span><b>OFFLINE</b></footer>
+        </article>
+        <article class="skill-card hud-c">
+          <header><h3>RAG</h3><span class="badge">RETRIEVAL // VECTORS</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><ellipse cx="44" cy="14" rx="26" ry="8"/><path d="M18 14v40c0 4.4 11.6 8 26 8M70 14v16M18 34c0 4.4 11.6 8 26 8"/><circle cx="78" cy="47" r="13"/><path d="M87 56l12 12"/></svg></div>
+          <div class="meter"><i style="--v:.92"></i></div>
+          <footer><span>BM25 + CHROMADB</span><b>GROUNDED</b></footer>
+        </article>
+        <article class="skill-card hud-c">
+          <header><h3>HONEYPOTS</h3><span class="badge red">OFFENSIVE // TRAP</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><path d="M40 4l14 8v16l-14 8-14-8V12zM70 4l14 8v16l-14 8-14-8V12zM55 30l14 8v16l-14 8-14-8V38z"/><circle cx="55" cy="46" r="3" fill="#000"/></svg></div>
+          <div class="meter"><i style="--v:.85"></i></div>
+          <footer><span>SSH :22 · HTTP :80</span><b>ARMED</b></footer>
+        </article>
+        <article class="skill-card hud-c">
+          <header><h3>REACT</h3><span class="badge">INTERFACE // UI</span></header>
+          <div class="skill-icon"><svg viewBox="0 0 110 72" aria-hidden="true"><ellipse cx="55" cy="36" rx="40" ry="13"/><ellipse cx="55" cy="36" rx="40" ry="13" transform="rotate(60 55 36)"/><ellipse cx="55" cy="36" rx="40" ry="13" transform="rotate(-60 55 36)"/><circle cx="55" cy="36" r="5" fill="#000"/></svg></div>
+          <div class="meter"><i style="--v:.86"></i></div>
+          <footer><span>REACT 19 · NATIVE · NEXT.JS</span><b>RENDERING</b></footer>
+        </article>
+      </div>
+    </div>
+    <div class="marquee" aria-label="Other tools">
+      <div class="marquee-track">
+        <span>FASTAPI</span><span>FLASK</span><span>NODE.JS</span><span>EXPRESS</span><span>NEXT.JS</span><span>REACT NATIVE</span><span>.NET</span><span>SWIFT</span><span>KOTLIN</span><span>ELECTRON</span><span>SOCKET.IO</span><span>MCP</span><span>CLAUDE CODE</span><span>CODEX CLI</span><span>CHROMADB</span><span>GEMINI API</span><span>OPENAI API</span><span>DOCKER</span><span>POSTGRESQL</span><span>MYSQL</span><span>MONGODB</span><span>REDIS</span><span>SQLITE</span><span>TYPESCRIPT</span><span>JAVA</span><span>PLAYWRIGHT</span><span>PYTEST</span><span>GITHUB ACTIONS</span><span>VERCEL</span><span>PANDAS</span>
+        <span aria-hidden="true">FASTAPI</span><span aria-hidden="true">FLASK</span><span aria-hidden="true">NODE.JS</span><span aria-hidden="true">EXPRESS</span><span aria-hidden="true">NEXT.JS</span><span aria-hidden="true">REACT NATIVE</span><span aria-hidden="true">.NET</span><span aria-hidden="true">SWIFT</span><span aria-hidden="true">KOTLIN</span><span aria-hidden="true">ELECTRON</span><span aria-hidden="true">SOCKET.IO</span><span aria-hidden="true">MCP</span><span aria-hidden="true">CLAUDE CODE</span><span aria-hidden="true">CODEX CLI</span><span aria-hidden="true">CHROMADB</span><span aria-hidden="true">GEMINI API</span><span aria-hidden="true">OPENAI API</span><span aria-hidden="true">DOCKER</span><span aria-hidden="true">POSTGRESQL</span><span aria-hidden="true">MYSQL</span><span aria-hidden="true">MONGODB</span><span aria-hidden="true">REDIS</span><span aria-hidden="true">SQLITE</span><span aria-hidden="true">TYPESCRIPT</span><span aria-hidden="true">JAVA</span><span aria-hidden="true">PLAYWRIGHT</span><span aria-hidden="true">PYTEST</span><span aria-hidden="true">GITHUB ACTIONS</span><span aria-hidden="true">VERCEL</span><span aria-hidden="true">PANDAS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="sec-head dark-head" data-reveal>
+        <span class="sec-num">04</span>
+        <h2>FROM IDEAS TO BUILDS</h2>
+      </div>
+      <p class="sec-low" data-reveal>local-first ai, security, client work &amp; the tools in between. best first. classified = private source, hover to decrypt.</p>
+
+      <div class="proj-grid">
+        <article class="proj featured hud-c" data-repo="https://github.com/ruby-coder-gh/TruthLens-AI" data-tag="flagship · offline RAG">
+          <header class="proj-bar"><span><i class="led g"></i>OFFLINE RAG // LANGGRAPH</span><span>PROJECT // 01</span></header>
+          <div class="proj-media">
+            <ol class="rag-flow" aria-label="How a question flows through VeritasRAG">
+              <li>query</li><li>retrieve</li><li>generate</li><li>evaluate</li><li>answer</li>
+            </ol>
+            <div class="mock" aria-hidden="true">
+              <span class="l" style="--i:0"><span class="d">$</span> veritas ask <span class="y">"what does clause 7 say about liability?"</span></span>
+              <span class="l" style="--i:1"><span class="c">retrieve</span>  bm25 + vectors (chromadb) .... <span class="g">12 chunks</span></span>
+              <span class="l" style="--i:2"><span class="c">generate</span>  ollama, local model ......... <span class="g">ok</span></span>
+              <span class="l" style="--i:3"><span class="c">evaluate</span>  grounding check ............ <span class="g">pass</span></span>
+              <span class="l" style="--i:4"><span class="c">redact  </span>  pii: email, phone .......... <span class="g">2 masked</span></span>
+              <span class="l" style="--i:5"><span class="g">answer  </span>  cited [1] [3]  confidence <span class="g">high</span></span>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>VeritasRAG</h3>
+            <p class="proj-desc">Ask questions about private documents and get cited, confidence-scored answers, generated entirely on your own machine. No paid APIs, and nothing leaves the box.</p>
+            <ul class="points">
+              <li>Hybrid BM25 + vector retrieval over ChromaDB, orchestrated with LangGraph</li>
+              <li>Hardened by default: JWT, bcrypt, rate limits, account lockout, PII redaction, audit logs</li>
+              <li>One-command demo with <code>./run.sh --demo</code></li>
+            </ul>
+            <ul class="chips"><li>Python</li><li>FastAPI</li><li>LangGraph</li><li>Ollama</li><li>ChromaDB</li><li>React</li><li>TypeScript</li><li>Docker</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">RUNS 100% OFFLINE</span><a class="gh-btn" href="https://github.com/ruby-coder-gh/TruthLens-AI" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="client build · refinery ops">
+          <header class="proj-bar"><span><i class="led"></i>OPS // PRECIOUS METALS</span><span>CLASSIFIED // 02</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">lot </span> <span class="x">RF-0142</span> · scrap in · 6 bars</span>
+            <span class="l" style="--i:1"><span class="c">melt</span> loss 0.42% ......... <span class="r">tolerance breach</span></span>
+            <span class="l" style="--i:2"><span class="c">lab </span> blind assay · purity <span class="x">995.8</span></span>
+            <span class="l" style="--i:3"><span class="c">bar </span> 1kg #07 stamped → <span class="g">invoice frozen</span></span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>RefineryFlow</h3>
+            <p class="proj-desc">Tracks every gold and silver lot through a working refinery, from metal receipt to stamped bars and the invoice. Built for a real client and running in production.</p>
+            <p class="logic"><b>LOGIC</b>Each team (office, furnace, refinery, blind lab, compliance) enters weights and purity in its own lane. One calculation engine works out fine metal, melt and refining losses against tolerances, and every party's metal balance. Out come frozen VAT invoices, delivery notes and a chain-of-custody report.</p>
+            <ul class="chips"><li>React 19</li><li>Vite</li><li>Node.js</li><li>Vercel Functions</li><li>MySQL / TiDB</li><li>Playwright</li><li>GitHub Actions</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">IN PRODUCTION</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="android ↔ mac link">
+          <header class="proj-bar"><span><i class="led"></i>NATIVE // CROSS-DEVICE</span><span>CLASSIFIED // 03</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">pair </span> ok · <span class="g">AES-256-GCM</span> · HKDF keys</span>
+            <span class="l" style="--i:1"><span class="c">video</span> h264 1080×2400 → mac</span>
+            <span class="l" style="--i:2"><span class="c">input</span> tap (540,1210) · <span class="x">sms sent</span></span>
+            <span class="l" style="--i:3"><span class="c">sync </span> clipboard ⇄ · notification reply <span class="g">✓</span></span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>PhoneLink</h3>
+            <p class="proj-desc">Mirror, control and sync an Android phone from a Mac over an encrypted direct link, with no cloud in between.</p>
+            <p class="logic"><b>LOGIC</b>QR pairing hands over a key that never crosses the network, and every frame is AES-256-GCM encrypted over raw TCP. The Android side streams screen, audio and camera as H.264 and performs taps through an accessibility service. The Mac menu-bar app turns trackpad and keys into gestures and syncs clipboard, files, notifications and SMS.</p>
+            <ul class="chips"><li>Kotlin</li><li>Swift</li><li>SwiftUI</li><li>CryptoKit</li><li>Network.framework</li><li>MediaCodec</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">PRIVATE BUILD</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj hud-c" data-repo="https://github.com/ruby-coder-gh/SOC" data-tag="multi-agent SOC">
+          <header class="proj-bar"><span><i class="led"></i>MULTI-AGENT // SOC</span><span>PROJECT // 04</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">[watcher ]</span> alert #4412  ssh brute force <span class="r">203.0.113.7</span></span>
+            <span class="l" style="--i:1"><span class="c">[analyst ]</span> 37 events correlated  severity <span class="r">HIGH</span></span>
+            <span class="l" style="--i:2"><span class="c">[enforcer]</span> block 203.0.113.7  <span class="g">rule pushed</span></span>
+            <span class="l" style="--i:3"><span class="c">[stream  ]</span> socket.io <span class="g">● live</span> → dashboard</span>
+          </div></div>
+          <div class="proj-body">
+            <h3>SOC Swarm</h3>
+            <p class="proj-desc">A security operations center run by three AI agents. Watcher triages alerts, Analyst investigates, Enforcer remediates, and every step streams live to the dashboard.</p>
+            <ul class="chips"><li>FastAPI</li><li>LangGraph</li><li>Socket.IO</li><li>React 19</li><li>TypeScript</li><li>Tailwind</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">3 AGENTS ONLINE</span><a class="gh-btn" href="https://github.com/ruby-coder-gh/SOC" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="ai trading coach">
+          <header class="proj-bar"><span><i class="led"></i>FINTECH // AI COACH</span><span>CLASSIFIED // 05</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">log   </span> EURUSD long · 2 screenshots</span>
+            <span class="l" style="--i:1"><span class="c">gemini</span> entry <span class="g">8</span> / exit <span class="y">6</span> / rules <span class="g">9</span></span>
+            <span class="l" style="--i:2"><span class="c">emote </span> tag <span class="x">fomo</span> → <span class="r">win rate ↓</span></span>
+            <span class="l" style="--i:3"><span class="c">report</span> weekly · profit factor 1.8</span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>TradeReverie AI</h3>
+            <p class="proj-desc">An AI trading journal that grades every trade and turns emotions into performance data.</p>
+            <p class="logic"><b>LOGIC</b>Traders log entries, stops, exits, sessions, emotion tags and chart screenshots. The backend computes win rate, profit factor, R:R, streaks and an equity curve, sliced by weekday, session and emotion. Gemini reads each trade with its screenshots and returns strict-JSON 1–10 scores with fixes, plus weekly reports, under a per-user daily AI limit.</p>
+            <ul class="chips"><li>Next.js 14</li><li>TypeScript</li><li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Gemini 2.5 Flash</li><li>Docker</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">PRIVATE MVP</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj hud-c" data-repo="https://github.com/ruby-coder-gh/DOCUGUARD-main" data-tag="legal AI">
+          <header class="proj-bar"><span><i class="led"></i>LEGAL AI // NLP</span><span>PROJECT // 06</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0">clause 4.2  liability ..... <span class="r">HIGH</span>  uncapped indemnity</span>
+            <span class="l" style="--i:1">clause 9.1  ip rights ..... <span class="y">MED</span>   assignment too broad</span>
+            <span class="l" style="--i:2">clause 12   termination ... <span class="g">LOW</span>   30-day notice</span>
+            <span class="l" style="--i:3"><span class="d">export →</span> contract_v3.docx  <span class="d">diff v2..v3</span></span>
+          </div></div>
+          <div class="proj-body">
+            <h3>LegalEase</h3>
+            <p class="proj-desc">Upload a contract and get clause-by-clause risk flags for liability, IP and termination, each grounded in the exact excerpt with a suggested rewrite. Also drafts five contract types, diffs versions and exports DOCX.</p>
+            <ul class="chips"><li>Python</li><li>Flask</li><li>NLP</li><li>TF-IDF retrieval</li><li>SQLite</li><li>python-docx</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">RISK ENGINE READY</span><a class="gh-btn" href="https://github.com/ruby-coder-gh/DOCUGUARD-main" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+        </article>
+
+        <article class="proj hud-c" data-repo="https://github.com/ruby-coder-gh/Groovy-Chatbot" data-tag="live demo">
+          <header class="proj-bar"><span><i class="led g"></i>COMPLIANCE AI // GEMINI</span><span>PROJECT // 07</span></header>
+          <div class="proj-media"><img src="assets/iso-bot.webp" alt="Login screen of the live ISO 27001 readiness app" width="960" height="570" loading="lazy"></div>
+          <div class="proj-body">
+            <h3>ISO 27001 Readiness Bot</h3>
+            <p class="proj-desc">Built for my Groovy Web final technical round. Walks a company through 30 questions across 7 Annex A domains. Gemini maps free-text answers to control IDs (and is blocked from inventing new ones), scores readiness per domain and exports a PDF gap report.</p>
+            <ul class="chips"><li>Flask</li><li>Gemini API</li><li>ReportLab</li><li>PostgreSQL</li><li>Vercel</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">LIVE ON VERCEL</span><span class="btns"><a class="gh-btn" href="https://groovy-chatbot.vercel.app" target="_blank" rel="noopener">OPEN LIVE ↗</a><a class="gh-btn" href="https://github.com/ruby-coder-gh/Groovy-Chatbot" target="_blank" rel="noopener">GITHUB ↗</a></span></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="mac trading journal">
+          <header class="proj-bar"><span><i class="led"></i>TRADING // ANALYTICS</span><span>CLASSIFIED // 08</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">trade  </span> #214 XAUUSD long · 09:47 IST</span>
+            <span class="l" style="--i:1"><span class="c">mistake</span> early exit · cost <span class="x">-0.8R</span></span>
+            <span class="l" style="--i:2"><span class="c">stats  </span> win rate · wilson ci · <span class="y">n=31</span></span>
+            <span class="l" style="--i:3"><span class="c">ai     </span> review · 3 rules cited · <span class="g">saved</span></span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>Trade Journal</h3>
+            <p class="proj-desc">A Mac app that logs trades in seconds and shows which habits cost money, with honest sample sizes.</p>
+            <p class="logic"><b>LOGIC</b>Plans, IST-timed entries and exits, fees, emotions, mistake tags and screenshots go into a local SQLite journal. The analytics engine computes expectancy, drawdown, streaks, session heatmaps and mistake-cost rankings, and every rate carries its sample size and a confidence interval. AI reviews cite their evidence and are checked locally before they're saved.</p>
+            <ul class="chips"><li>Electron</li><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>SQLite</li><li>shadcn/ui</li><li>Playwright</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">PRIVATE MAC APP</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj hud-c" data-repo="https://github.com/ruby-coder-gh/AI-Resume-Analyzer" data-tag="career AI">
+          <header class="proj-bar"><span><i class="led"></i>CAREER AI // GPT-4O-MINI</span><span>PROJECT // 09</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0">ats score ......... <span class="g">82/100</span></span>
+            <span class="l" style="--i:1">skills radar ...... <span class="c">6 axes mapped</span></span>
+            <span class="l" style="--i:2">keyword gaps ...... <span class="y">docker, ci/cd, kubernetes</span></span>
+            <span class="l" style="--i:3"><span class="d">report →</span> resume_report.pdf</span>
+          </div></div>
+          <div class="proj-body">
+            <h3>ResumeIQ AI</h3>
+            <p class="proj-desc">Drop in a PDF résumé and get an ATS score, a six-axis skills radar, keyword gaps against the industry and a polished PDF report.</p>
+            <ul class="chips"><li>React 19</li><li>Vite</li><li>Tailwind v4</li><li>Zustand</li><li>Express</li><li>GPT-4o-mini</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status">ANALYZER ONLINE</span><a class="gh-btn" href="https://github.com/ruby-coder-gh/AI-Resume-Analyzer" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="mcp chart agent">
+          <header class="proj-bar"><span><i class="led"></i>AI AGENTS // TRADING</span><span>CLASSIFIED // 10</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">cdp  </span> attach :9222 · chart XAUUSD</span>
+            <span class="l" style="--i:1"><span class="c">agent</span> pine script edit · <span class="g">compiled</span></span>
+            <span class="l" style="--i:2"><span class="c">setup</span> CHOCH · H1 bias <span class="r">↓</span> · <span class="x">level marked</span></span>
+            <span class="l" style="--i:3"><span class="c">push </span> → phone · <span class="g">alert armed</span></span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>Chart Copilot</h3>
+            <p class="proj-desc">Lets AI agents read and drive a live TradingView chart, then pings the phone when a setup forms.</p>
+            <p class="logic"><b>LOGIC</b>An MCP server, adapted from an open-source base, attaches to TradingView Desktop over the Chrome DevTools Protocol so Claude or Codex agents can read the chart, edit Pine Script, replay and set alerts. Custom Pine indicators turn market-structure rules into marked setups from 1-minute data. A Node watcher forwards new setups to the phone and logs them into backtest journals.</p>
+            <ul class="chips"><li>Node.js</li><li>MCP SDK</li><li>Chrome DevTools Protocol</li><li>Pine Script</li><li>Python</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">PRIVATE BUILD</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj hud-c" data-repo="https://github.com/ruby-coder-gh/Honeypot-Advance" data-tag="threat intel">
+          <header class="proj-bar"><span><i class="led"></i>THREAT INTEL // HONEYPOT</span><span>PROJECT // 11</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="d">22:14:07</span> ssh   <span class="r">198.51.100.23</span>  root / admin123</span>
+            <span class="l" style="--i:1"><span class="d">22:14:09</span> ssh   <span class="r">198.51.100.23</span>  $ wget x.sh</span>
+            <span class="l" style="--i:2"><span class="d">22:15:41</span> http  <span class="r">192.0.2.88</span>     wp-admin / password1</span>
+            <span class="l" style="--i:3"><span class="y">top offender →</span> 198.51.100.23  412 tries</span>
+          </div></div>
+          <div class="proj-body">
+            <h3>HoneyPy</h3>
+            <p class="proj-desc">An SSH and HTTP honeypot that poses as a server and a WordPress login, then records attacker IPs, usernames, passwords and commands. A dashboard ranks the top offenders.</p>
+            <ul class="chips"><li>Python</li><li>SSH</li><li>Flask</li><li>Dash</li><li>pandas</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status red">TRAP ARMED</span><a class="gh-btn" href="https://github.com/ruby-coder-gh/Honeypot-Advance" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="reel scheduler">
+          <header class="proj-bar"><span><i class="led"></i>SOCIAL // AUTOMATION</span><span>CLASSIFIED // 12</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">queue </span> 35 reels · mon–sun sorted</span>
+            <span class="l" style="--i:1"><span class="c">ocr   </span> stale date card → <span class="x">discard</span></span>
+            <span class="l" style="--i:2"><span class="c">sched </span> 5/5 slots filled · <span class="g">20:00 IST</span></span>
+            <span class="l" style="--i:3"><span class="c">claude</span> 3 growth actions for tomorrow</span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>Page Autopilot</h3>
+            <p class="proj-desc">Runs a Facebook Page on autopilot: schedules reels from a folder queue and reports reach with AI growth tips.</p>
+            <p class="logic"><b>LOGIC</b>Reels are sorted into a weekday queue, and OCR drops any that open with an out-of-date date card. A scheduler fills five IST slots a day through the Graph API, never posts twice and archives what went out. Daily insights feed Claude for growth actions, and a FastAPI dashboard shows the queue, schedule and stats.</p>
+            <ul class="chips"><li>Python</li><li>Graph API</li><li>Claude API</li><li>FastAPI</li><li>ffmpeg</li><li>Tesseract OCR</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">PRIVATE BUILD</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj classified hud-c" data-tag="nifty 200 screener">
+          <header class="proj-bar"><span><i class="led"></i>EQUITIES // RESEARCH</span><span>CLASSIFIED // 13</span></header>
+          <div class="proj-media"><div class="mock" aria-hidden="true">
+            <span class="l" style="--i:0"><span class="c">load  </span> nifty200 · 197/200 priced</span>
+            <span class="l" style="--i:1"><span class="c">filter</span> ma stack · rs &gt; nifty · dd &lt; 15%</span>
+            <span class="l" style="--i:2"><span class="c">rank  </span> shallowest 1y drawdown</span>
+            <span class="l" style="--i:3"><span class="c">out   </span> shortlist <span class="x">9 names</span> → csv</span>
+          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-body">
+            <h3>Swing Screener</h3>
+            <p class="proj-desc">Screens the Nifty 200 down to a low-drawdown swing-trade shortlist for filing-backed research.</p>
+            <p class="logic"><b>LOGIC</b>Pulls current Nifty 200 constituents from NSE and a year of adjusted prices, and stops if the data is stale. Filters on moving-average trend, strength against the Nifty 50, drawdown, ATR and liquidity, then ranks by the shallowest one-year drawdown. Output is a dated CSV that feeds a written report. It never places orders.</p>
+            <ul class="chips"><li>Python 3.12</li><li>pandas</li><li>yfinance</li><li>uv</li><li>pytest</li></ul>
+          </div>
+          <footer class="proj-foot"><span class="status amber">RESEARCH TOOL</span><span class="sealed">SOURCE CLASSIFIED</span></footer>
+        </article>
+
+        <article class="proj hud-c archive">
+          <header class="proj-bar"><span><i class="led"></i>LAB ARCHIVE // SIDE BUILDS</span><span>14+</span></header>
+          <ul class="archive-list">
+            <li><a href="https://github.com/ruby-coder-gh/Groovy-Trainnning" target="_blank" rel="noopener">AI Bootcamp Log ↗</a><p>Three weeks of daily AI builds at Groovy: a multi-provider LLM CLI, RAG with four chunking strategies, a 7-tool agent and a Gemini standup bot that posts to Slack.</p></li>
+            <li><a href="https://github.com/ruby-coder-gh/AI-Agent" target="_blank" rel="noopener">AI-Agent ↗</a><p>Express API with JWT auth, bcrypt, MongoDB and Redis.</p></li>
+            <li><a href="https://github.com/ruby-coder-gh/Ransomeware-" target="_blank" rel="noopener">Ransomware lab ↗</a><p>Encrypt and decrypt simulator for studying attack behavior in isolation.</p></li>
+            <li><b class="arch-private">FaceAttend · classified</b><p>Tkinter front end for a face-recognition attendance system. Early prototype, private.</p></li>
+          </ul>
+        </article>
+      </div>
+
+      <a class="progress-pill" href="https://github.com/ruby-coder-gh" target="_blank" rel="noopener"><i></i>MORE BUILDS IN PROGRESS</a>
+    </div>
+  </section>
+
+  <section class="term-sec wrap" id="terminal">
+    <div class="sec-head dark-head" data-reveal>
+      <span class="sec-num">05</span>
+      <h2>TERMINAL</h2>
+    </div>
+    <p class="sec-low" data-reveal>talk to the machine. type help, or tap a command.</p>
+    <div class="term" data-reveal>
+      <div class="term-bar" aria-hidden="true"><span>guest@nikunj: ~ (tty1)</span><span class="status">CONNECTED</span></div>
+      <div class="term-out" id="term-out" role="log" aria-label="Terminal output"></div>
+      <form class="term-line" id="term-form">
+        <label for="term-in">guest@nikunj:~$</label>
+        <input id="term-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send">
+      </form>
+    </div>
+  </section>
+
+  <section class="contact lime-sec" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div data-reveal>
+          <h2>Let's build something smart &amp; secure</h2>
+          <div class="contact-btns">
+            <a class="hud-btn" href="mailto:nvaghasiya621@gmail.com">SHOOT A MESSAGE</a>
+            <button class="hud-btn" type="button" id="copy-email">COPY EMAIL</button>
+          </div>
+        </div>
+        <ul class="contact-rows" data-reveal>
+          <li><span>CAREER</span><a href="https://www.linkedin.com/in/nikunj-vaghasiya-9b84a5290" target="_blank" rel="noopener">LINKEDIN ↗</a></li>
+          <li><span>CODE</span><a href="https://github.com/ruby-coder-gh" target="_blank" rel="noopener">GITHUB ↗</a></li>
+          <li><span>MAIL</span><a href="mailto:nvaghasiya621@gmail.com">NVAGHASIYA621@GMAIL.COM ↗</a></li>
+          <li><span>LIVE</span><a href="https://groovy-chatbot.vercel.app" target="_blank" rel="noopener">ISO 27001 BOT ↗</a></li>
+        </ul>
+      </div>
+      <p class="dotmatrix" aria-hidden="true">PORTFOLIO/NIKUNJ</p>
+      <footer class="foot"><span>© 2026 NIKUNJ VAGHASIYA</span><span>ALL SYSTEMS NOMINAL</span></footer>
+    </div>
+  </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

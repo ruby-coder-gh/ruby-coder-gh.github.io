@@ -1,0 +1,8 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# local tooling, not part of the site
+.claude/
+.playwright-mcp/
+.DS_Store
+.ignore
