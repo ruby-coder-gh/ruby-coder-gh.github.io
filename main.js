@@ -3,7 +3,7 @@ const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const html = document.documentElement;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = matchMedia('(pointer: fine)').matches;
-const EMAIL = 'nvaghasiya621@gmail.com';
+const EMAIL = 'nikunjpatel23703@gmail.com';
 const LINKS = {
   github: 'https://github.com/ruby-coder-gh',
   linkedin: 'https://www.linkedin.com/in/nikunj-vaghasiya-9b84a5290',
