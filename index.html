@@ -316,14 +316,7 @@
             <ol class="rag-flow" aria-label="How a question flows through VeritasRAG">
               <li>query</li><li>retrieve</li><li>generate</li><li>evaluate</li><li>answer</li>
             </ol>
-            <div class="mock" aria-hidden="true">
-              <span class="l" style="--i:0"><span class="d">$</span> veritas ask <span class="y">"what does clause 7 say about liability?"</span></span>
-              <span class="l" style="--i:1"><span class="c">retrieve</span>  bm25 + vectors (chromadb) .... <span class="g">12 chunks</span></span>
-              <span class="l" style="--i:2"><span class="c">generate</span>  ollama, local model ......... <span class="g">ok</span></span>
-              <span class="l" style="--i:3"><span class="c">evaluate</span>  grounding check ............ <span class="g">pass</span></span>
-              <span class="l" style="--i:4"><span class="c">redact  </span>  pii: email, phone .......... <span class="g">2 masked</span></span>
-              <span class="l" style="--i:5"><span class="g">answer  </span>  cited [1] [3]  confidence <span class="g">high</span></span>
-            </div>
+            <img src="assets/veritasrag.webp" alt="VeritasRAG answering a question: Verified 92% badge, cited answer and the evidence panel with relevance scores" width="1200" height="719" loading="lazy">
           </div>
           <div class="proj-body">
             <h3>VeritasRAG</h3>
@@ -340,12 +333,7 @@
 
         <article class="proj classified hud-c" data-tag="client build · refinery ops">
           <header class="proj-bar"><span><i class="led"></i>OPS // PRECIOUS METALS</span><span>CLASSIFIED // 02</span></header>
-          <div class="proj-media"><div class="mock" aria-hidden="true">
-            <span class="l" style="--i:0"><span class="c">lot </span> <span class="x">RF-0142</span> · scrap in · 6 bars</span>
-            <span class="l" style="--i:1"><span class="c">melt</span> loss 0.42% ......... <span class="r">tolerance breach</span></span>
-            <span class="l" style="--i:2"><span class="c">lab </span> blind assay · purity <span class="x">995.8</span></span>
-            <span class="l" style="--i:3"><span class="c">bar </span> 1kg #07 stamped → <span class="g">invoice frozen</span></span>
-          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-media"><img class="shot" src="assets/refineryflow.webp" alt="RefineryFlow dashboard with demo data: metal received chart, open lots by stage, lab and alert counts" width="1366" height="860" loading="lazy"><span class="media-note">DEMO DATA · CLIENT INFO REMOVED</span><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
           <div class="proj-body">
             <h3>RefineryFlow</h3>
             <p class="proj-desc">Tracks every gold and silver lot through a working refinery, from metal receipt to stamped bars and the invoice. Built for a real client and running in production.</p>
@@ -357,12 +345,30 @@
 
         <article class="proj classified hud-c" data-tag="android ↔ mac link">
           <header class="proj-bar"><span><i class="led"></i>NATIVE // CROSS-DEVICE</span><span>CLASSIFIED // 03</span></header>
-          <div class="proj-media"><div class="mock" aria-hidden="true">
-            <span class="l" style="--i:0"><span class="c">pair </span> ok · <span class="g">AES-256-GCM</span> · HKDF keys</span>
-            <span class="l" style="--i:1"><span class="c">video</span> h264 1080×2400 → mac</span>
-            <span class="l" style="--i:2"><span class="c">input</span> tap (540,1210) · <span class="x">sms sent</span></span>
-            <span class="l" style="--i:3"><span class="c">sync </span> clipboard ⇄ · notification reply <span class="g">✓</span></span>
-          </div><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
+          <div class="proj-media"><svg class="diagram" viewBox="0 0 600 230" role="img" aria-label="PhoneLink architecture: the Android app streams screen, audio and camera to the Mac over an encrypted direct TCP link; the Mac app sends taps, keys, clipboard and files back">
+            <rect class="bx" x="18" y="22" width="150" height="186" rx="16"/>
+            <text class="hd" x="36" y="50">ANDROID</text>
+            <text class="t" x="36" y="80">screen → H.264</text>
+            <text class="t" x="36" y="102">audio · camera</text>
+            <text class="t" x="36" y="124">notifs · SMS</text>
+            <text class="t" x="36" y="146">a11y taps</text>
+            <text class="t" x="36" y="190">Kotlin</text>
+            <rect class="bx" x="414" y="30" width="168" height="140" rx="8"/>
+            <path class="bx" d="M396 176h204l-14 14H410z"/>
+            <text class="hd" x="430" y="54">MAC · MENU BAR</text>
+            <text class="t" x="430" y="80">decode → render</text>
+            <text class="t" x="430" y="102">keys → gestures</text>
+            <text class="t" x="430" y="124">clipboard · files ⇄</text>
+            <text class="t" x="430" y="156">Swift · SwiftUI</text>
+            <text class="lk" x="291" y="62">AES-256-GCM · HKDF</text>
+            <line class="ln" x1="172" y1="96" x2="410" y2="96"/>
+            <line class="ln back" x1="172" y1="140" x2="410" y2="140"/>
+            <text class="t c" x="291" y="88">video · audio →</text>
+            <text class="t c" x="291" y="160">← taps · keys</text>
+            <circle class="pk" cx="176" cy="96" r="4"/>
+            <circle class="pk back" cx="176" cy="140" r="4"/>
+            <text class="t c dim2" x="291" y="200">QR pair · Bonjour / hotspot · raw TCP</text>
+          </svg><span class="stamp" aria-hidden="true">CLASSIFIED</span></div>
           <div class="proj-body">
             <h3>PhoneLink</h3>
             <p class="proj-desc">Mirror, control and sync an Android phone from a Mac over an encrypted direct link, with no cloud in between.</p>

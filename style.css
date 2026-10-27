@@ -625,3 +625,22 @@ code { font-family: var(--f-mono); font-size: .88em; color: var(--lime); }
   .help-row { grid-template-columns: 11ch 1fr; }
   .coords { display: none; }
 }
+
+/* real visuals: screenshots + diagram */
+.featured .proj-media img { height: auto; max-height: none; object-fit: contain; border-top: 1px solid #191919; }
+.media-note { position: absolute; top: 12px; left: 12px; padding: 3px 8px; background: rgba(0, 0, 0, .8); font: 700 9px var(--f-mono); letter-spacing: .15em; color: var(--yellow); }
+.classified .shot { filter: blur(5px) grayscale(.7) brightness(.6); transition: filter .5s, transform .7s var(--ease); }
+.proj.classified:hover .shot { filter: none; }
+@media (hover: none) { .proj.classified.in .shot { filter: none; transition-delay: 1.4s; } }
+.diagram { display: block; width: 100%; height: auto; padding: 14px 10px; font-family: var(--f-mono); }
+.diagram .bx { fill: #070707; stroke: #333; }
+.diagram .hd { fill: var(--lime); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.diagram .t { fill: #9a9a9a; font-size: 10.5px; }
+.diagram .c { text-anchor: middle; }
+.diagram .dim2 { fill: #5e5e5e; }
+.diagram .lk { fill: var(--lime); font-size: 10px; letter-spacing: .12em; text-anchor: middle; }
+.diagram .ln { stroke: var(--cyan); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.diagram .ln.back { stroke: var(--yellow); }
+.diagram .pk { fill: var(--cyan); animation: pkt 1.8s linear infinite; }
+.diagram .pk.back { fill: var(--yellow); animation-direction: reverse; }
+@keyframes pkt { to { transform: translateX(230px); } }
